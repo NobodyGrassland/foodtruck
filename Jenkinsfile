@@ -48,7 +48,7 @@ node {
             echo "let's get started"
             sleep 5
             echo "almost"
-            sleep 2
+            sleep 3
             echo "finished"
         }
         notifyAtomist("SUCCESS")
