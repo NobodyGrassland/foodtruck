@@ -36,6 +36,7 @@ def notifyAtomist(buildStatus, buildPhase="FINALIZED",
 
     sh "curl --silent -XPOST -H 'Content-Type: application/json' -d '${payload}' ${endpoint}"
 }
+
 node {
     try {
         stage('Checkout') {
@@ -46,6 +47,8 @@ node {
         stage('Build') {
             echo "let's get started"
             sleep 5
+            echo "almost"
+            sleep 2
             echo "finished"
         }
         notifyAtomist("SUCCESS")
